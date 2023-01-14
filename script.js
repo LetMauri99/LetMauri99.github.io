@@ -2,12 +2,13 @@ var letraEncriptar = ['e','i','a','o','u'];
 var palabraEncriptar = ['enter','imes','ai','ober','ufat'];
 
 function mostrarResultado(textoCifrado){
-    document.getElementById("imagenDerecha").style.display = "none";
-    document.getElementById("texto").style.display = "none";
-    document.getElementById("texto2").innerHTML = textoCifrado;
+    document.getElementById("alertas").style.display = "none";
+    document.getElementById("alguien").style.display = "none";
+    document.getElementById("salida").style.display = "block";
+    document.getElementById("salida").innerHTML = textoCifrado;
     document.getElementById("copiar").style.display = "show";
     document.getElementById("copiar").style.display = "inherit";
-    document.getElementById("texto2").readOnly = true
+    document.getElementById("salida").readOnly = true
 }
 
 function encriptador(){
@@ -31,7 +32,7 @@ function desencriptador(){
 }
 
 function copiar(){
-    let contenido = document.querySelector("#texto2");
+    let contenido = document.querySelector("#salida");
     contenido.select();
     document.execCommand("copy");
 }

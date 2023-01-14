@@ -7,32 +7,40 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js"></script>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
     <title>Encriptador de texto</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img  src="vector.png" alt="logo">
-        </header>
-        
-        <div class="left">
-            <textarea  class="textInput" cols="70" rows="10" id="entrada" placeholder="Ingrese el texto aqui"></textarea>
-        </div>
-            
-        <div class="right">
-            <img src="someone.png" id="imagenDerecha" alt="persona buscando">
-            <h1 id="texto">Ningun mensaje fue encontrado</h1>
-            <textarea id="texto2" cols="70" rows="10" readOnly = true>Ingrese el texto que desees encriptar o desencriptar</textarea>
-            <input id="copiar" type="submit" onclick="copiar()" value="Copiar">
-        </div>
-
-        <div class="mainButtoms">
-            <p>Solo minusculas y sin acentos</p>
-            <input type="submit" onclick="encriptador()" value="Encriptar!">
-            <input type="submit" onclick="desencriptador()" value="Desencriptar!">
-        </div>
-    </div>
+    <header>
+        <nav>
+            <img class="logo" src="vector.png" alt="logo">
+        </nav>
+    </header>
+    <main>
+        <section>
+            <textarea id="entrada" class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <div>
+                <h6 class="informacion">Solo minusculas y sin acentos</h6>
+            </div>
+            <div class="botones">
+                <input class="btn-encriptar" type="submit" onclick="encriptador()" value="Encriptar!">
+                <input class="btn-desencriptar" type="submit" onclick="desencriptador()" value="Desencriptar!">
+            </div>
+        </section>
+        <section class="mensaje">
+            <textarea id="salida" cols="20" rows="10" readOnly = true></textarea>
+            <img src="someone.png" alt="buscando" id="alguien">
+            <div id="alertas" style="color: black;">
+                <h2><b>Ningun mensaje fue encontrado</b></h2>
+                <h4>Ingrese el texto que desee encriptar</h4>
+            </div>
+            <div>
+                <input id="copiar"class="btn-copiar" type="submit" onclick="copiar()" value="Copiar">
+            </div>    
+        </section>
+    </main>
     <footer>
 
     </footer>
