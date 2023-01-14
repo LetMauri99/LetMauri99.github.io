@@ -29,12 +29,12 @@
                 <input class="btn-desencriptar" type="submit" onclick="desencriptador()" value="Desencriptar!">
             </div>
         </section>
-        <section class="mensaje">
+        <section class="mensaje" id="mensaje">
             <textarea id="salida" cols="20" rows="10" readOnly = true></textarea>
             <img src="someone.png" alt="buscando" id="alguien">
-            <div id="alertas" style="color: black;">
-                <h2><b>Ningun mensaje fue encontrado</b></h2>
-                <h4>Ingrese el texto que desee encriptar</h4>
+            <div id="alertas" class="alertas" style="color: black;">
+                <h2 style="background: white;"><strong style="background: white;">Ningún mensaje fue encontrado</strong></h2>
+                <h4 style="background: white;">Ingresa el texto que desees encriptar o desencriptar</h4>
             </div>
             <div>
                 <input id="copiar"class="btn-copiar" type="submit" onclick="copiar()" value="Copiar">

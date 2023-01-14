@@ -8,7 +8,7 @@ function mostrarResultado(textoCifrado){
     document.getElementById("salida").innerHTML = textoCifrado;
     document.getElementById("copiar").style.display = "show";
     document.getElementById("copiar").style.display = "inherit";
-    document.getElementById("salida").readOnly = true
+    document.getElementById("salida").readOnly = true;
 }
 
 function encriptador(){
